@@ -12,7 +12,7 @@ const RunButton = () => {
     setStatus('compiling');
     setProgress(0);
 
-    // Simulation steps for the "Build" process
+    // steps for the Build
     const steps = [
       { pct: 10, msg: "npm install..." },
       { pct: 30, msg: "gcc -O2 main.c" },
@@ -30,33 +30,32 @@ const RunButton = () => {
         clearInterval(interval);
         setStatus('success');
         setLog('EXEC_SUCCESS');
-        
-        // After a moment, scroll to projects
+
         setTimeout(() => {
           const projectsSection = document.getElementById('projects');
           if (projectsSection) {
             projectsSection.scrollIntoView({ behavior: 'smooth' });
           }
-          
-          // Reset button after scrolling
+
+          // Reset after scrolling
           setTimeout(() => {
             setStatus('idle');
             setLog('Run Project');
             setProgress(0);
           }, 1000);
         }, 800);
-        
+
         return;
       }
 
       setProgress(steps[currentStep].pct);
       setLog(steps[currentStep].msg);
 
-    }, 300); // Speed of the "compilation"
+    }, 300);
   };
 
   return (
-    <button 
+    <button
       onClick={handleRun}
       className={`
         relative overflow-hidden px-6 py-3 font-mono font-bold rounded-sm border transition-all duration-300 group
@@ -66,17 +65,16 @@ const RunButton = () => {
       `}
     >
       {/* Progress Bar Background (Only visible during compiling) */}
-      <div 
+      <div
         className="absolute inset-0 bg-emerald-900/40 transition-all duration-300 ease-out z-0"
         style={{ width: status === 'compiling' ? `${progress}%` : '0%' }}
       />
 
-      {/* Content Layer */}
       <div className="relative z-10 flex items-center gap-3 min-w-[140px] justify-center">
         {status === 'idle' && <Play size={18} className="group-hover:fill-current" />}
         {status === 'compiling' && <Loader2 size={18} className="animate-spin text-emerald-400" />}
         {status === 'success' && <Check size={18} strokeWidth={3} />}
-        
+
         <span className="uppercase tracking-wider text-sm">{log}</span>
       </div>
     </button>

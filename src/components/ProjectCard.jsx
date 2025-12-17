@@ -14,7 +14,6 @@ import {
 const getTechIcon = (tagName) => {
   const lowerTag = tagName.toLowerCase();
 
-  // Map specific keywords to specific icons
   if (lowerTag.includes('c++')) {
     return <Code2 size={14} className="text-orange-400" />;
   }
@@ -37,7 +36,6 @@ const getTechIcon = (tagName) => {
     return <GitBranch size={14} className="text-yellow-400" />;
   }
 
-  // Default fallback for generic coding tags
   return <Hash size={14} className="text-slate-500" />;
 };
 
@@ -45,17 +43,14 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="group bg-[#161b22] border border-slate-800 rounded p-5 hover:border-emerald-500/50 transition-all flex flex-col h-full hover:-translate-y-1 hover:shadow-lg">
 
-      {/* Header: Icon + Title */}
       <div className="flex items-center gap-3 text-emerald-500 mb-4">
         <span className="font-bold text-lg tracking-tight">{project.title}</span>
       </div>
 
-      {/* Description */}
       <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
         {project.desc}
       </p>
 
-      {/* Tags with Dynamic Icons */}
       <div className="flex flex-wrap gap-2 mt-auto">
         {project.tags.map((tag, i) => (
           <div

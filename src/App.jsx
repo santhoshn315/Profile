@@ -18,7 +18,6 @@ const SectionTitle = ({ title, num }) => (
   </div>
 );
 
-// --- MAIN APP COMPONENT ---
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
 

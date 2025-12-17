@@ -3,17 +3,13 @@ import { Github, Linkedin, Mail, GitBranch, Terminal, Power, AlertTriangle, Chec
 
 const Footer = () => {
 
-  // Logic to handle the email click
+  // handle the email click
   const handleEmailClick = (e) => {
     e.preventDefault();
     const email = "santhoshn315@gmail.com";
     const subject = "Message from Portfolio Visitor";
     const message = "Hi Santosh,\n\n ";
-
-    // Construct the mailto link
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
-    // Trigger the email client
     window.location.href = mailtoLink;
   };
 
@@ -24,24 +20,29 @@ const Footer = () => {
         {/* Top Section: The "Command" & Links */}
         <div className="py-12 flex flex-col md:flex-row justify-between items-center gap-6">
 
-          {/* Left: The "Exit" Command */}
-          {/* Left: The "Exit" Command */}
-<div className="flex flex-col gap-2 text-center md:text-left">
-  <div className="flex items-center gap-2 text-emerald-500">
-     <Terminal size={16} />
-     <span className="font-bold">system_shutdown_sequence()</span>
-  </div>
-  <p className="text-slate-500 text-sm">
-    {/* "return" keyword in purple */}
-    <span className="text-purple-400">return</span> 
-    
-    {/* The Score in Yellow String */}
-    <span className="text-yellow-200 ml-2">"10/10"</span>; 
-    
-    {/* The Comment */}
-    <span className="text-slate-600 ml-2">// Profile parsed. Verdict: Perfect match.</span>
-  </p>
-</div>
+          {/* Left: The One-Liner Execution */}
+          <div className="flex flex-col gap-2 text-center md:text-left">
+            <div className="flex items-center gap-2 font-mono text-sm md:text-base">
+              <Terminal size={16} className="text-emerald-500" />
+
+              <span className="font-bold text-slate-300">
+                <span className="text-purple-400">console</span>
+                <span className="text-slate-500">.</span>
+                <span className="text-blue-400">log</span>
+                <span className="text-slate-500">(</span>
+                <span className="text-yellow-200">evaluate_profile()</span>
+                <span className="text-slate-500">);</span>
+              </span>
+            </div>
+
+            <p className="text-slate-400 text-sm pl-6 md:pl-0 font-medium">
+              <span className="text-slate-400">// Output: </span>
+
+              <span className="text-emerald-400 font-bold">"10/10"</span>
+
+              <span className="text-slate-400"> (Perfect Match)</span>
+            </p>
+          </div>
 
           {/* Right: Social Links */}
           <div className="flex gap-4">
@@ -57,7 +58,7 @@ const Footer = () => {
               <span className="text-slate-400 text-sm group-hover:text-blue-400">linkedin</span>
             </a>
 
-            {/* Mail - Updated with your Handler */}
+            {/* Mail */}
             <button
               onClick={handleEmailClick}
               className="group flex items-center gap-2 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded hover:border-red-500/50 hover:bg-slate-800 transition-all"
@@ -70,7 +71,7 @@ const Footer = () => {
 
       </div>
 
-      {/* Bottom "Status Bar" */}
+      {/* Bottom Status Bar */}
       <div className="bg-[#010409] border-t border-slate-800 py-2 px-4 text-xs text-slate-500 flex justify-between items-center select-none">
 
         <div className="flex items-center gap-4">

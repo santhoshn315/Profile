@@ -23,42 +23,41 @@ const Navbar = () => {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
-        scrolled 
-          ? "bg-[#0d1117]/90 backdrop-blur-md border-slate-800 py-2" 
-          : "bg-transparent border-transparent py-4"
-      }`}
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${scrolled
+        ? "bg-[#0d1117]/90 backdrop-blur-md border-slate-800 py-2"
+        : "bg-transparent border-transparent py-4"
+        }`}
     >
       <div className="w-full px-6 md:px-12">
         <div className="flex justify-between items-center h-12">
-          
+
           {/* LEFT SIDE: Logo & Socials */}
           <div className="flex items-center gap-6">
-            
+
             {/* Logo area */}
-            <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+            <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
               <Terminal className="text-emerald-500 w-5 h-5 group-hover:text-emerald-400 transition-colors" />
               <span className="font-mono font-bold text-lg text-slate-100 tracking-tight group-hover:text-emerald-400 transition-colors">
                 Santosh_N
               </span>
             </div>
 
-            {/* Social Icons (Vertical divider | ) */}
+            {/* Social Icons  */}
             <div className="hidden sm:flex items-center gap-3 pl-4 border-l border-slate-700">
-              <a 
-                href="https://github.com/santhoshn315" 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href="https://github.com/santhoshn315"
+                target="_blank"
+                rel="noreferrer"
                 className="text-slate-400 hover:text-white hover:bg-slate-800 p-1.5 rounded transition-all"
                 title="GitHub"
               >
                 <Github size={18} />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/santhoshn315/" 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href="https://www.linkedin.com/in/santhoshn315/"
+                target="_blank"
+                rel="noreferrer"
                 className="text-slate-400 hover:text-blue-400 hover:bg-slate-800 p-1.5 rounded transition-all"
                 title="LinkedIn"
               >
@@ -80,15 +79,15 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-4">
-             {/* Show Socials on Mobile (outside menu) */}
-             <div className="flex gap-2 sm:hidden">
-                <a href="#" className="text-slate-400 hover:text-white"><Github size={18} /></a>
-                <a href="#" className="text-slate-400 hover:text-blue-400"><Linkedin size={18} /></a>
-             </div>
-             
-             <button
+            {/* Show Socials on Mobile (outside menu) */}
+            <div className="flex gap-2 sm:hidden">
+              <a href="#" className="text-slate-400 hover:text-white"><Github size={18} /></a>
+              <a href="#" className="text-slate-400 hover:text-blue-400"><Linkedin size={18} /></a>
+            </div>
+
+            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-300 hover:text-emerald-400 focus:outline-none"
             >
