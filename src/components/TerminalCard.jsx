@@ -67,7 +67,7 @@ const TerminalCard = () => {
             </h1>
             
             <p className="text-slate-400 max-w-2xl mb-6 text-lg">
-            Software Engineer passionate about building software that makes a difference.
+            Committing code that matters. Pushing systems that scale.
             </p>
 
             <div className="p-4 border-l-2 border-slate-700 bg-slate-800/30 text-slate-300 italic">
