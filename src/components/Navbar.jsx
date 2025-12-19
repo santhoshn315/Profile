@@ -83,8 +83,8 @@ const Navbar = () => {
           <div className="md:hidden flex items-center gap-4">
             {/* Show Socials on Mobile (outside menu) */}
             <div className="flex gap-2 sm:hidden">
-              <a href="#" className="text-slate-400 hover:text-white"><Github size={18} /></a>
-              <a href="#" className="text-slate-400 hover:text-blue-400"><Linkedin size={18} /></a>
+              <a href="https://github.com/santhoshn315" target="_blank" className="text-slate-400 hover:text-white"><Github size={18} /></a>
+              <a href="https://www.linkedin.com/in/santhoshn315/" target="_blank" className="text-slate-400 hover:text-blue-400"><Linkedin size={18} /></a>
             </div>
 
             <button
