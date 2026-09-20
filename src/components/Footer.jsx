@@ -94,7 +94,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-1 text-emerald-500">
             <CheckCircle2 size={12} />
-            <span>Works on my machine</span>
+            <span>Works on your machine too</span>
           </div>
         </div>
 
