@@ -19,20 +19,27 @@ const portfolioData = {
   experience: [
     {
       id: 1,
+      role: "Senior Engineer",
+      company: "Qualcomm",
+      year: "Apr 2026 - Present",
+      desc: "",
+    },
+    {
+      id: 2,
       role: "Software Engineer 2",
       company: "Microchip Technology",
       year: "Nov 2023 - Apr 2026",
       desc: "",
     },
     {
-      id: 2,
+      id: 3,
       role: "Software Intern ",
       company: "Microchip Technology",
       year: "Dec 2022 - Nov 2023",
       desc: "",
     },
     {
-      id: 3,
+      id: 4,
       role: "Systems Engineer",
       company: "Infosys",
       year: "Oct 2020 - Aug 2021",
